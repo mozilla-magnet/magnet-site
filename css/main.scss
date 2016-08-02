@@ -158,10 +158,10 @@ a {
 .hero h1 {
   font-size: 72px;
   font-weight: 100;
-  margin: 0;
-  margin-top: -15px;
+  line-height: 1;
+  margin: -15px 0 9px;
   letter-spacing: -2px;
-  color: #999;
+  color: #777;
 }
 
 .hero p {
@@ -249,7 +249,7 @@ a {
 
 .contact-buttons > li > a {
   display: block;
-  padding: $spacing-unit/3;
+  padding: $spacing-unit/4;
 }
 
 .contact-buttons > li:hover > a {
