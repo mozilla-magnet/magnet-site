@@ -14,8 +14,8 @@ $spacing-unit:     28px;
 
 $text-color: #888;
 $background-color: #f2f2f2;
-$brand-color: #2a7ae2;
-$border-color: #C2C2C2;
+$brand-color: #00A2D4;
+$border-color: #CCC;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -27,11 +27,69 @@ $content-width: 800px;
 $on-palm: 600px;
 $on-laptop: 800px;
 
+
+@font-face {
+   font-family: 'fira';
+   src: url('fonts/firasans-book-webfont.woff2') format('woff2'),
+        url('fonts/firasans-book-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+    font-family: 'fira';
+    src: url('fonts/firasans-extralight-webfont.woff2') format('woff2'),
+         url('fonts/firasans-extralight-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+   font-family: 'fira';
+   src: url('fonts/firasans-extralightitalic-webfont.woff2') format('woff2'),
+        url('fonts/firasans-extralightitalic-webfont.woff') format('woff');
+   font-weight: 200;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'fira';
+   src: url('fonts/firasans-light-webfont.woff2') format('woff2'),
+        url('fonts/firasans-light-webfont.woff') format('woff');
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'fira';
+   src: url('fonts/firasans-lightitalic-webfont.woff2') format('woff2'),
+        url('fonts/firasans-lightitalic-webfont.woff') format('woff');
+   font-weight: 300;
+   font-style: italic;
+}
+
+@font-face {
+    font-family: 'fira';
+    src: url('fonts/firasans-ultralight-webfont.woff2') format('woff2'),
+         url('fonts/firasans-ultralight-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+   font-family: 'fira';
+   src: url('fonts/firasans-ultralightitalic-webfont.woff2') format('woff2'),
+        url('fonts/firasans-ultralightitalic-webfont.woff') format('woff');
+   font-weight: 100;
+   font-style: italic;
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+  color: $text-color;
 }
 
 h1,
@@ -39,17 +97,16 @@ h2,
 h3 {
   font-style: italic;
   font-weight: 300;
-  color: #aaa;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: $brand-color;
 }
 
 .app {
   background: $background-color;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'fira';
   font-weight: 300;
   font-size: 17px;
   color: $text-color;
@@ -72,12 +129,17 @@ a {
   display: block;
   padding: $spacing-unit/2 $spacing-unit/2;
   line-height: 1;
+  color: inherit;
+}
+
+.app-nav > li > a:hover {
+  color: $brand-color;
 }
 
 .app-footer {
   text-align: center;
   padding: $spacing-unit/2;
-  padding-top: $spacing-unit * 3;
+  padding-top: $spacing-unit * 4;
   font-size: 12px;
   color: #aaa;
 }
@@ -88,18 +150,23 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: default;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .hero h1 {
   font-size: 72px;
+  font-weight: 100;
   margin: 0;
   margin-top: -15px;
-  margin-bottom: 5px;
   letter-spacing: -2px;
+  color: #999;
 }
 
 .hero p {
   font-size: 32px;
+  font-weight: 100;
   letter-spacing: -0.25px;
   line-height: 1;
   margin: 0;
@@ -118,32 +185,82 @@ a {
 
 .app-section p {
   line-height: 1.65;
-  margin: $spacing-unit 0;
+  margin: $spacing-unit/2 0;
+}
+
+.app-section p:last-child {
+  margin-bottom: 0;
 }
 
 .app-section-text {
-  margin-top: -0.65em;
+  margin-top: -0.5em;
+  margin-bottom: $spacing-unit;
 }
 
 .app-section h2 {
-  font-size: 26px;
+  font-size: 30px;
+  font-weight: 100;
   line-height: 1;
   margin: $spacing-unit 0;
 }
 
+.store-icons {
+  overflow: hidden;
+}
+
+.store-icons > a {
+  display: block;
+  float: left;
+}
+
 .store-icon {
+  display: block;
   height: 50px;
-  margin-right: $spacing-unit;
+  margin-right: $spacing-unit/2;
 }
 
 .border-bottom {
   border-bottom: solid 1px $border-color;
 }
 
+.contact-buttons {
+  display: flex;
+  padding: 0;
+}
+
+.contact-buttons > li {
+  flex: 1;
+  margin-left: $spacing-unit/2;
+  border: solid 1px $brand-color;
+  border-radius: 3px;
+  list-style: none;
+  text-align: center;
+  color: $brand-color;
+  font-size: 15px;
+}
+
+.contact-buttons > li:first-child {
+  margin-left: 0;
+}
+
+.contact-buttons > li:hover {
+  background-color: $brand-color;
+}
+
+.contact-buttons > li > a {
+  display: block;
+  padding: $spacing-unit/3;
+}
+
+.contact-buttons > li:hover > a {
+  color: #fff;
+}
+
 .github-ribbon {
   position: fixed;
   top: 0;
   right: 0;
+  display: block;
   width: 149px;
   height: 149px;
   background: url(../images/github-ribbon@2x.png);

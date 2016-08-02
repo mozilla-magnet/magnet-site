@@ -12,7 +12,7 @@ layout: default
     <div class="app-section-text">
       <p>{{ site.mobile_text }}</p>
     </div>
-    <div class="l-margin-vertical">
+    <div class="store-icons l-margin-vertical">
       <a href="#"><img class="store-icon" src="images/google-play.png"/></a>
       <a href="#"><img class="store-icon" src="images/apple-app-store.png"/></a>
     </div>
@@ -22,15 +22,22 @@ layout: default
   <div class="inner">
     <h2>about</h2>
     <div class="app-section-text">
-      <p>{{ site.about_text }}</p>
+      {% capture about-content %}{% include about.md %}{% endcapture %}
+      {{ about-content | markdownify }}
     </div>
   </div>
 </section>
 <section class="app-section app-section-contact" id="contact">
   <div class="inner">
     <h2>contact</h2>
-    <div class="app-section-text">
+    <!-- <div class="app-section-text">
       <p>{{ site.contact_text }}</p>
-    </div>
+    </div> -->
+    <ul class="contact-buttons">
+      <li><a href="https://twitter.com/trymagnet">twitter</a></li>
+      <li><a href="https://github.com/mozilla-magnet/magnet">github</a></li>
+      <li><a href="mailto:magnet@magnet.ist">email</a></li>
+      <li><a href="irc://irc.mozilla.org/magnet">irc</a></li>
+    </ul>
   </div>
 </section>
