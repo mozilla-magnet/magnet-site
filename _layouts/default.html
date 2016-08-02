@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+    <base href="{{ page.baseurl }}">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:300italic,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body class="app">
+    <header class="app-header border-bottom">
+      <nav class="app-nav">
+        <li><a href="#mobile-app">mobile</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#contact">contact</a></li>
+        <!-- <li><a href="#contact">blog</a></li> -->
+      </nav>
+    </header>
+    <div class="app-main">{{ content }}</div>
+    <footer class="app-footer">
+      &copy; {{ 'now' | date: "%Y" }} Mozilla | <a href="terms">terms of use</a> | <a href="privacy">privacy policy</a>
+    </footer>
+    <div class="github-ribbon"></div>
+  </body>
+</html>

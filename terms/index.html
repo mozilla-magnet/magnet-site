@@ -1,0 +1,14 @@
+---
+layout: default
+baseurl: ../
+---
+
+<section class="app-section app-section-mobile-app">
+  <div class="inner">
+    <h1>terms and conditions</h1>
+    <div class="app-section-text">
+      {% capture privacy-content %}{% include terms.md %}{% endcapture %}
+      {{ privacy-content | markdownify }}
+    </div>
+  </div>
+</section>
