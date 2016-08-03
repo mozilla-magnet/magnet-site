@@ -1,4 +1,4 @@
-(function(ga) {
+(function() {
   'use strict';
 
   function Home() {
@@ -14,20 +14,30 @@
   Home.prototype = {
     onAppleAppStoreClick: function(e) {
       e.preventDefault();
-      this.record('app-store-button', 'click', 'apple-app-store');
+
+      window.ga('send', {
+        hitType: 'event',
+        eventCategory: 'outbound',
+        eventAction: 'click',
+        eventLabel: 'apple-app-store'
+      });
+
       alert('coming soon');
     },
 
     onGooglePlayClick: function(e) {
       e.preventDefault();
-      this.record('app-store-button', 'click', 'google-play-store');
-      alert('coming soon');
-    },
 
-    record: function(category, action, label) {
-      ga('send', 'event', category, action, label);
+      window.ga('send', {
+        hitType: 'event',
+        eventCategory: 'outbound',
+        eventAction: 'click',
+        eventLabel: 'google-play-store'
+      });
+
+      alert('coming soon');
     }
   }
 
   return new Home();
-})(ga);
+})();
