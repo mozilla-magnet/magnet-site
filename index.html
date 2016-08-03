@@ -9,9 +9,7 @@ layout: default
 <section class="app-section app-section-mobile-app border-bottom" id="mobile">
   <div class="inner">
     <h2>mobile</h2>
-    <div class="app-section-text">
-      <p>{{ site.mobile_text }}</p>
-    </div>
+    <div class="app-section-text">{{ site.mobile_text | markdownify }}</div>
     <div class="store-icons l-margin-vertical">
       <a href="#" class="js-google-play-store"><img class="store-icon" src="images/google-play.png"/></a>
       <a href="#" class="js-apple-app-store"><img class="store-icon" src="images/apple-app-store.png"/></a>
@@ -22,8 +20,8 @@ layout: default
   <div class="inner">
     <h2>about</h2>
     <div class="app-section-text">
-      {% capture about-content %}{% include about.md %}{% endcapture %}
-      {{ about-content | markdownify }}
+      {% capture about-text %}{% include about.md %}{% endcapture %}
+      {{ about-text | markdownify }}
     </div>
   </div>
 </section>
@@ -36,7 +34,7 @@ layout: default
     <ul class="contact-buttons">
       <li><a href="https://twitter.com/trymagnet">twitter</a></li>
       <li><a href="https://github.com/mozilla-magnet/magnet">github</a></li>
-      <li><a href="mailto:magnet@magnet.ist">email</a></li>
+      <li><a href="mailto:team@trymagnet.org">email</a></li>
       <li><a href="irc://irc.mozilla.org/magnet">irc</a></li>
     </ul>
   </div>
