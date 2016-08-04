@@ -17,8 +17,8 @@ title: Project Magnet
 email: your-email@domain.com
 mobile_text: >
   Our mobile app for Android and iOS aims to provide an enhanced
-  [Physical Web](https://google.github.io/physical-web/) browsing experience.
-  We’re starting small, with the aim to learn and iterate fast. Try Magnet and
+  <a href="https://google.github.io/physical-web/" data-track="link-physical-web-site">Physical Web</a>
+  browsing experience. We’re starting small, with the aim to learn and iterate fast. Try Magnet and
   let us know what you think.
 contact_text: >
   Got love? Got hate? Got advice? We’re all ears, reach out!

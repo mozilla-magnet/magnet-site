@@ -11,8 +11,16 @@ layout: default
     <h2>mobile</h2>
     <div class="app-section-text">{{ site.mobile_text | markdownify }}</div>
     <div class="store-icons l-margin-vertical">
-      <a href="#" class="js-google-play-store"><img class="store-icon" src="images/google-play.png"/></a>
-      <a href="#" class="js-apple-app-store"><img class="store-icon" src="images/apple-app-store.png"/></a>
+      <a
+        data-track="link-app-store-android"
+        class="js-app-store-android"
+        ><img class="store-icon" src="images/google-play.png"/>
+      </a>
+      <a
+        data-track="link-app-store-ios"
+        class="js-app-store-ios"
+        ><img class="store-icon" src="images/apple-app-store.png"/>
+      </a>
     </div>
   </div>
 </section>
@@ -32,11 +40,58 @@ layout: default
       <p>{{ site.contact_text }}</p>
     </div> -->
     <ul class="contact-buttons">
-      <li><a href="https://twitter.com/trymagnet">twitter</a></li>
-      <li><a href="https://github.com/mozilla-magnet/magnet">github</a></li>
-      <li><a href="mailto:team@trymagnet.org">email</a></li>
-      <li><a href="irc://irc.mozilla.org/magnet">irc</a></li>
+      <li>
+        <a
+          href="https://twitter.com/trymagnet"
+          data-track="link-twitter"
+          >twitter</a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/mozilla-magnet/magnet"
+          data-track="link-github"
+          >github</a></li>
+      <li>
+        <a
+          href="mailto:team@trymagnet.org"
+          data-track="link-email"
+          >email</a>
+      </li>
+      <li>
+        <a
+          href="irc://irc.mozilla.org/magnet"
+          data-track="link-irc"
+          >irc</a>
+      </li>
     </ul>
   </div>
 </section>
-<script src="js/home.js"></script>
+<script>
+  (function() {
+    'use strict';
+
+    function Home() {
+      this.els = {
+        appStoreAndroidButton: document.querySelector('.js-app-store-android'),
+        appStoreIosButton: document.querySelector('.js-app-store-ios')
+      };
+
+      this.els.appStoreAndroidButton.addEventListener('click', this.onAndroidClick.bind(this));
+      this.els.appStoreIosButton.addEventListener('click', this.onIosClick.bind(this));
+    }
+
+    Home.prototype = {
+      onIosClick: function(e) {
+        e.preventDefault();
+        alert('coming soon');
+      },
+
+      onAndroidClick: function(e) {
+        e.preventDefault();
+        alert('coming soon');
+      }
+    }
+
+    return new Home();
+  })();
+</script>

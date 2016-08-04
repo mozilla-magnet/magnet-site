@@ -104,6 +104,10 @@ a {
   color: $brand-color;
 }
 
+a:active {
+  opacity: 0.6;
+}
+
 .app {
   background: $background-color;
   font-family: 'fira';
@@ -217,6 +221,7 @@ a {
   display: block;
   height: 45px;
   margin-right: $spacing-unit/2;
+  cursor: pointer;
 }
 
 .border-bottom {
