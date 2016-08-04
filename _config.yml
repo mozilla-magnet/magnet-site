@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Project Magnet
 email: your-email@domain.com
+description: "Experiments on the Physical Web"
 mobile_text: >
   Our mobile app for Android and iOS aims to provide an enhanced
   <a href="https://google.github.io/physical-web/" data-track="link-physical-web-site">Physical Web</a>
