@@ -4,13 +4,14 @@ When Mozilla (that’s us), receives information from you, our [Mozilla Privacy 
 
 ### Things you should know
 
-Mozilla receives the URL broadcast by every beacon discovered in your vicinity byour app. To the extent a beacon has been set up and situated by Mozilla such that Mozilla knows the beacon's location and the URL it broadcasts, then Mozilla also receives constructive knowledge of your approximate location when Mozilla receives the URL of that beacon
+Mozilla receives the URL broadcast by every beacon discovered in your vicinity by our app.  Beacons may be provided by Mozilla or other companies.  To the extent a beacon has been set up and situated by Mozilla such that Mozilla knows the beacon’s location and the URL it broadcasts, then Mozilla also receives constructive knowledge of your approximate location when Mozilla receives the URL of that beacon.
 
-We display information about the URLs corresponding to those beacons as tiles in our app.  When you click on a tile, your device's default browser or application servicing that URL will open.  We do not receive the URLs beyond the original ones for each beacon.  For example, you may browse web pages off of the original URL and we will not receive the URLs for those pages.
+We display information about the URLs corresponding to those beacons as tiles in our app.  When you click on a tile, your device’s default browser or application servicing that URL will open.  We do not receive the URLs beyond the original ones for each beacon.  For example, you may browse web pages off of the original URL and we will not receive the URLs for those pages.
 
 If you do not want us to receive the URLs announced by beacons and, if applicable, constructive knowledge of your location, you should uninstall our app.
 
-In addition, we may receive certain  statistical data such as your
+In addition, we may receive certain  statistical data such as your:
+
 - App install
 - App launch
 - List refresh
@@ -22,9 +23,10 @@ In addition, we may receive certain  statistical data such as your
 - App to foreground
 - Opening the app from a notification
 - Dismissing a notification
-- App killed from task manager.
+- App killed from task manager
 
-This data is used to provide and improve our service. We use the services of Google Analytics to receive this data.  We encourage you to review its privacy policies and terms, as they are different from ours.
+This data is used to provide and improve our service.  We use the services of  Google Analytics to receive this data and the URLs.  We encourage you to review its privacy policies and terms, as they are different from ours.
 
-We may need to change this notice. We will post the updates. Your continued use of Project Magnet after the update has been posted constitutes your acceptance of such changes.
- 
+We may need to change this notice. We will post the updates.
+
+Your continued use of Project Magnet after the update has been posted constitutes your acceptance of such changes.
