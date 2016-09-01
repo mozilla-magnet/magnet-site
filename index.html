@@ -13,12 +13,12 @@ layout: default
     <div class="store-icons l-margin-vertical">
       <a
         data-track="link-app-store-android"
-        class="js-app-store-android"
+        href="{{ site.store_links.android }}"
         ><img class="store-icon" src="images/google-play.png"/>
       </a>
       <a
         data-track="link-app-store-ios"
-        class="js-app-store-ios"
+        href="{{ site.store_links.ios }}"
         ><img class="store-icon" src="images/apple-app-store.png"/>
       </a>
     </div>
@@ -66,32 +66,3 @@ layout: default
     </ul>
   </div>
 </section>
-<script>
-  (function() {
-    'use strict';
-
-    function Home() {
-      this.els = {
-        appStoreAndroidButton: document.querySelector('.js-app-store-android'),
-        appStoreIosButton: document.querySelector('.js-app-store-ios')
-      };
-
-      this.els.appStoreAndroidButton.addEventListener('click', this.onAndroidClick.bind(this));
-      this.els.appStoreIosButton.addEventListener('click', this.onIosClick.bind(this));
-    }
-
-    Home.prototype = {
-      onIosClick: function(e) {
-        e.preventDefault();
-        alert('coming soon');
-      },
-
-      onAndroidClick: function(e) {
-        e.preventDefault();
-        alert('coming soon');
-      }
-    }
-
-    return new Home();
-  })();
-</script>

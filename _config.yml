@@ -34,7 +34,10 @@ url: "https://trymagnet.org" # the base hostname & protocol for your site
 ga_tracking_id:
   development: UA-81867483-2
   production: UA-81867483-1
-  
+store_links:
+  ios: "https://itunes.apple.com/us/app/project-magnet/id1141419308"
+  android: "https://play.google.com/store/apps/details?id=org.mozilla.magnet"
+
 # Build settings
 markdown: kramdown
 theme: minima
